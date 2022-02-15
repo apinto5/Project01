@@ -1,0 +1,11 @@
+/*css for page header*/
+body{
+  background-color: #FFDED2;
+}
+.titleBar{
+  padding: 1em;
+  background-color:#E19AB7;
+  color: white;
+  text-align: center;
+  margin-bottom: .5em;
+}
