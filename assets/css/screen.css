@@ -14,10 +14,20 @@ input{
   padding: .2em .2em;
   margin-bottom: .5em;
 }
-input[type="checkbox"]{
-  padding:100%;
-  width:5%;
+
+.cartPreview{
+  width: 20%;
+  float: left;
+  display: block;
+  background-color: #FDF0CB;
 }
-form{
+.shippingForm{
+  float: left;
+  display: block;
   width: 50%;
+  margin-right: 10%;
+}
+.cartPreview img{
+  width: 5em;
+  height: 5em;
 }
