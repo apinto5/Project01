@@ -1,11 +1,23 @@
 /*css for page header*/
 body{
-  background-color: #FFDED2;
+  background-color: #F0EDEC;
 }
 .titleBar{
   padding: 1em;
-  background-color:#E19AB7;
+  background-color:#AA80B8;
   color: white;
   text-align: center;
   margin-bottom: .5em;
+}
+input{
+  width: 100%;
+  padding: .2em .2em;
+  margin-bottom: .5em;
+}
+input[type="checkbox"]{
+  padding:100%;
+  width:5%;
+}
+form{
+  width: 50%;
 }
