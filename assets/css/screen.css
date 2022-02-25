@@ -31,3 +31,11 @@ input{
   width: 5em;
   height: 5em;
 }
+@media screen and (max-width: 600px) {
+  .shippingForm{
+    width: 100%;
+  }
+  .cartPreview{
+    width:100%;
+  }
+}
