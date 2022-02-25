@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Roses R Us</title>
     <link rel="stylesheet" media="screen" href="assets/css/screen.css"/>
+    <script src="scripts.js"></script>
   </head>
   <body>
     <div class="titleBar">
@@ -39,14 +40,22 @@
             <label for="phoneInput">Phone Number: </label>
             <input type="text" name="phoneInput" id="phoneInput">
           </section>
- 				  <input type="submit" name="submitBtn" id="Submit" value="Next">
+ 				  <input type="submit" onClick="nextpage();" name="submitBtn" id="Submit" value="Next">
  			   </form>
       </section>
 
       <section class="cartPreview">
         <h1>Order Summary</h1>
         <section class="cartItems">
-
+          <img src="assets/images/rose.jpg" alt="Roses: Red, Single">
+          <p>Quantity: 3</p>
+          <p>Price: $3.99</p>
+        </section>
+        <section class="cartTotal">
+          <h2>Total</h2>
+          <p>Subtotal: $11.97</p>
+          <p>Taxes: $1.20</p>
+          <h1>Total: 13.17</h1>
         </section>
       </section>
 
