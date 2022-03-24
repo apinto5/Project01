@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="shipping-info">
   <head>
     <meta charset="utf-8">
     <title>Roses R Us</title>
     <link rel="stylesheet" media="screen" href="../assets/css/screen.css"/>
-    <script src="scripts.js"></script>
   </head>
   <body>
     <section class="titleBar">
@@ -19,10 +18,10 @@
     <main>
       <section class="shippingForm">
         <h2>Shipping Information</h2>
-	    	<form action="#" method="get" onsubmit="">
+	    <form action="#" method="get" name="shippingform" id="shippingform" onsubmit="">
         <section class="shippingInfo">
- 		      <label for="inputName">Name: </label>
-			    <input type="text" name="inputName" id="inputName">
+ 		  <label for="inputName">Name: </label>
+		  <input type="text" name="inputName" id="inputName">
           <label for="inputStreet">Street Address: </label>
           <input type="text" name="inputStreet" id="inputStreet">
           <input type="text" name="inputAddressLineTwo" id="inputStreetTwo" placeholder="Box #, Apt #, Floor #, etc.">
@@ -41,17 +40,18 @@
           <label for="phoneInput">Phone Number: </label>
           <input type="text" name="phoneInput" id="phoneInput">
         </section>
- 				<input type="submit" onClick="nextpage();" name="submitBtn" id="Submit" value="Next">
+ 				<input type="submit" name="submitBtn" id="Submit" value="Next">
  			  </form>
       </section>
 	    <section class="cartPreview">
 		    <h2>Cart Preview</h2>
-		    <img src="assets/images/rose.jpg" width="20%" height="20%">
+		    <img src="../assets/images/rose.jpg" width="20%" height="20%">
 		    <p>Quantity: 2<br>
 		    Price: $3.00</p>
 	    </section>
     </main>
     <footer>
     </footer>
+  <script src="../scripts.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="billing-info">
   <head>
     <meta charset="utf-8">
     <title>Roses R Us</title>
@@ -12,7 +12,7 @@
     <main>
       <section class="billingForm">
         <h2>Billing Information</h2>
-         <form action="#" method="get" onsubmit="">
+         <form action="#" method="get" onsubmit="" name="billingform" id="billingform">
            <section class="cardInfo">
              <label for="inputName">Name on card: </label>
              <input type="text" name="inputName" id="inputName">
@@ -35,12 +35,14 @@
               <input type="text" name="inputZip" id="inputZip">
               <label for="inputState">State: </label>
               <select id="inputState" name="selectState">
-              <option value="Look into loading these options in with Javascript Array"></option>
-            </select>
-          </section>
+                <option value="Look into loading these options in with Javascript Array"></option>
+			  </select>
+            </section>
+			<input type="submit" name="submitBtn" id="Submit" value="Next">
          </form>
     </main>
     <footer>
     </footer>
+  <script src="../scripts.js"></script>
   </body>
 </html>
