@@ -1,41 +1,73 @@
 /*css for page header*/
 body{
-  background-color: #F0EDEC;
+  background-color: #F5F5F5;
 }
 .titleBar{
-  padding: 1em;
-  background-color:#AA80B8;
-  color: white;
+  padding: 2em;
+  background-color:#e8dff5;
+  color: black;
   text-align: center;
-  margin-bottom: .5em;
 }
-input{
+.navigation li{
+  float: left;
+  width: 2em;
+  padding: 1em 4em;
+  list-style-type: none;
+  text-decoration: none;
+}
+.navigation li:hover{
+  background-color: black;
+}
+.navigation{
+  margin-bottom: 3em;
   width: 100%;
-  padding: .2em .2em;
-  margin-bottom: .5em;
+  height: 3em;
+  background-color: #fce1e4;
 }
 
-.cartPreview{
-  width: 20%;
+input{
+  padding: .2em .2em;
+  margin-bottom: .5em;
   float: left;
-  display: block;
-  background-color: #FDF0CB;
+}
+input[type=text]{
+  width: 95%;
+}
+select{
+  float: left;
+}
+label{
+  float: left;
+  width: 100%;
+}
+.billingForm{
+  width: 50%;
+  float: left;
+  background-color:#fcf4dd;
 }
 .shippingForm{
   float: left;
   display: block;
-  width: 50%;
+  width: 40%;
+  background-color:#fcf4dd;
+  margin-left:10%;
+
+}
+
+.cartPreview{
+  background-color: #fcf4dd;
+  float: right;
+  width:30%;
   margin-right: 10%;
 }
-.cartPreview img{
-  width: 5em;
-  height: 5em;
+.cartPreview h2{
+  background-color: #fce1e4;
+  color: white;
 }
-@media screen and (max-width: 600px) {
-  .shippingForm{
-    width: 100%;
-  }
-  .cartPreview{
-    width:100%;
-  }
+.cartPreview img{
+  float: left;
+}
+.cartPreview p{
+  display: block;
+  font-size: 1.5em;
 }
