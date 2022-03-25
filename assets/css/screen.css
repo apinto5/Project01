@@ -10,73 +10,112 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /*css for page header*/
 body{
   background-color: #F5F5F5;
+  font-size: 2em;
 }
 .titleBar{
-  padding: 2em;
+  font-size: 4em; /*twice the size of page standard, accounted for in all other calculations*/
   background-color:#e8dff5;
   color: black;
   text-align: center;
-}
-.navigation li{
-  float: left;
-  width: 2em;
-  padding: 1em 4em;
-  list-style-type: none;
-  text-decoration: none;
-}
-.navigation li:hover{
-  background-color: black;
-}
-.navigation{
-  margin-bottom: 3em;
-  width: 100%;
-  height: 3em;
-  background-color: #fce1e4;
+  height: 1em;
 }
 
 input{
-  padding: .2em .2em;
-  margin-bottom: .5em;
   float: left;
+  font-size: 1em;
 }
 input[type=text]{
   width: 95%;
+  height: 2em;
+}
+input[type=submit]{
+  width: 8em;
+  height: 4em;
+  float: right;
+  margin-top: 1em;
+  margin-right: 10%;
+}
+input[type=checkbox]{
+  width: 1.5em;
+  height: 1.5em;
 }
 select{
   float: left;
+  width: 100%;
+  height: 4em;
 }
 label{
   float: left;
   width: 100%;
 }
+
 .billingForm{
-  width: 50%;
+  width: 100%;
   float: left;
   background-color:#fcf4dd;
 }
 .shippingForm{
   float: left;
   display: block;
-  width: 40%;
+  width: 100%;
   background-color:#fcf4dd;
-  margin-left:10%;
-
 }
-
 .cartPreview{
   background-color: #fcf4dd;
-  float: right;
-  width:30%;
-  margin-right: 10%;
+  float: left;
+  width:100%;
+  margin-bottom: 3em;
 }
-.cartPreview h2{
-  background-color: #fce1e4;
-  color: white;
-}
+
 .cartPreview img{
   float: left;
 }
 .cartPreview p{
   display: block;
-  font-size: 1.5em;
+}
+.cartPreview h2{
+  text-align: center;
+  color: black;
+  background-color: #fce1e4;
+  height: 2em;
+}
+
+@media screen and (min-width: 80em) {
+  body{
+    font-size: 1.5em;
+  }
+  .shippingForm{
+	float: left;
+	width: 40%;
+	margin-left: 10%;
+  }
+  .cartPreview{
+    float: right;
+	width: 30%;
+	margin-right: 10%;
+  }
+  .cartPreview h1{
+	margin-top: 0.333em;
+  }
+
+  .cartPreview img{
+	padding-right: 10%;
+
+	width: 10em;
+	height: 12em;
+  }
+  input[type=text]{
+	height: 2em;
+  }
+  label{
+	margin-top: 0.33333em;
+  }
+  .billingForm{
+	float: left;
+	width: 40%;
+	margin-left: 10%;
+  }
+  .billingTotals{
+	padding-top: 1em;
+  }
 }
