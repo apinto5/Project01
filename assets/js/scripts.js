@@ -13,7 +13,10 @@ if (html.id === 'billing-info') {
 	var elementList = document.querySelectorAll('#billingform input');
 	pageForm.addEventListener('submit', submitForm);
 }
-
+if (html.id === 'confirmation-page') {
+	var restartBut = document.querySelector('h2[name="restartButton"]');
+	restartBut.addEventListener('click', newOrder);
+}
 function submitForm(event){
 	var target = event.target;
 	event.preventDefault();
@@ -24,6 +27,11 @@ function submitForm(event){
 	}
 	if(isError)
 		alert("Some fields are blank. Please fill out entire form.");
-	if(!isError)
-		window.location = "../billing/index.html";
+	if(!isError & html.id === 'shipping-info')
+		window.location = "billing/index.html";
+	if(!isError & html.id === 'billing-info')
+		window.location = "../confirmation/index.html";
+}
+function newOrder(event){
+	window.location="../index.html"
 }
