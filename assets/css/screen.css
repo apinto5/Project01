@@ -13,11 +13,11 @@ body{
   font-size: 2em;
 }
 .titleBar{
-  font-size: 4em; /*twice the size of page standard, accounted for in all other calculations*/
+  font-size: 1em; /*twice the size of page standard, accounted for in all other calculations*/
   background-color:#e8dff5;
   color: black;
   text-align: center;
-  height: 1em;
+  height: 2em;
 }
 
 input{
@@ -79,7 +79,22 @@ label{
   background-color: #fce1e4;
   height: 2em;
 }
-
+.orderConfirmation{
+  text-align: center;
+  font-size: 1em;
+  padding-top: 0.5em;
+}
+.orderConfirmation h2{
+  font-size: 2em;
+}
+.orderConfirmation h2[name="restartButton"]{
+  margin-top: 1em;
+  background-color: #fce1e4;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 1em;
+  text-align: center;
+}
 @media screen and (min-width: 80em) {
   body{
     font-size: 1.5em;
