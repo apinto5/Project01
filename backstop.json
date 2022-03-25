@@ -10,6 +10,12 @@
       "label": "tablet",
       "width": 1024,
       "height": 768
+    },
+    {
+      "label": "desktop",
+      "width": 1920,
+      "height": 1080,
+
     }
   ],
   "onBeforeScript": "puppet/onBefore.js",
@@ -18,7 +24,7 @@
     {
       "label": "BackstopJS Homepage",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
+      "url": "apinto5.github.io/Project01/index.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
