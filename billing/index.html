@@ -28,26 +28,26 @@
          <form action="#" method="get" onsubmit="" name="billingform" id="billingform">
            <section class="cardInfo">
              <label for="inputName">Name on card: </label>
-             <input type="text" name="inputName" id="inputName">
+             <input type="text" name="inputName" id="inputName" aria-label="Name Field">
              <label for="inputCard">Card Number: </label>
-             <input type="text" name="inputCard" id="inputCard">
+             <input type="text" name="inputCard" id="inputCard" aria-label="Card Number Field">
              <label for="inputExpiration">Expiration Date: </label>
-             <input type="text" name="inputExpiration" id="inputExpiration">
+             <input type="text" name="inputExpiration" id="inputExpiration" aria-label="Card Expiration Field">
              <label for="inputCVC">CVC: </label>
-             <input type="text" name="inputCVC" id="inputCVC">
+             <input type="text" name="inputCVC" id="inputCVC" aria-label="CVC Field">
             </section>
             <section class="billingAddress">
               <label for="confirmBilling">Billing information is the same as shipping.</label>
-              <input type="checkbox" id="confirmBilling" name="billingCheckbox">
+              <input type="checkbox" id="confirmBilling" name="billingCheckbox" aria-label="Billing is same as Shipping Address Checkbox">
               <label for="inputStreet">Street Address: </label>
-              <input type="text" name="inputStreet" id="inputStreet">
+              <input type="text" name="inputStreet" id="inputStreet" aria-label="Street Field">
               <input type="text" name="inputAddressLineTwo" id="inputStreetTwo" placeholder="Box #, Apt #, Floor #, etc.">
               <label for="inputCity">City: </label>
-              <input type="text" name="inputCity" id="inputCity">
+              <input type="text" name="inputCity" id="inputCity" aria-label="City Field">
               <label for="inputZip">Zip Code: </label>
-              <input type="text" name="inputZip" id="inputZip">
+              <input type="text" name="inputZip" id="inputZip" aria-label="Zipcode Field">
               <label for="inputState">State: </label>
-              <select id="inputState" name="selectState">
+              <select id="inputState" name="selectState" aria-label="Select your State">
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -101,7 +101,7 @@
                 <option value="WY">Wyoming</option>
 	     </select>
            </section>
-	   <input type="submit" name="submitBtn" id="Submit" value="Next">
+	   <input type="submit" name="submitBtn" id="Submit" value="Next" aria-label="Finish Purchase">
          </form>
        </section>
      </section>
