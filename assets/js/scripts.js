@@ -10,8 +10,10 @@ if (html.id === 'shipping-info') {
 }
 if (html.id === 'billing-info') {
 	var pageForm = document.querySelector('form[name="billingform"]');
-	var elementList = document.querySelectorAll('#billingform input');
 	pageForm.addEventListener('submit', submitForm);
+	var elementList = document.querySelectorAll('#billingform input');
+	var billingSame = document.querySelector('input[name="billingCheckbox"]');
+	billingSame.addEventListener('click', disableInputs);
 }
 if (html.id === 'confirmation-page') {
 	var restartBut = document.querySelector('h2[name="restartButton"]');
@@ -34,4 +36,16 @@ function submitForm(event){
 }
 function newOrder(event){
 	window.location="../index.html"
+}
+function disableInputs(event){
+	if(document.getElementById('confirmBilling') . checked){
+		for (var i = 4, element; element = elementList[i++];){
+			document.billingform.elements[i].disabled=true;
+		}
+	}
+	else{
+		for (var i = 4, element; element = elementList[i++];){
+			document.billingform.elements[i].disabled=false;
+		}
+	}
 }
