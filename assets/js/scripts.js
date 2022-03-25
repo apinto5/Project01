@@ -37,6 +37,11 @@ function submitForm(event){
 function inputValidation(){
 	isError = false;
 	if(html.id === 'shipping-info'){
+		var checkedElement = document.shippingform.inputStreet.value;
+		if(checkedElement.includes("PO ") === true){
+			alert("We are unable to mail to PO Boxes.");
+			isError = true;
+		}
 		var checkedElement = document.shippingform.userEmail.value;
 		if(checkedElement.includes("@") === false){
 		  alert("Please enter a valid email address");
@@ -57,10 +62,34 @@ function inputValidation(){
 			alert("Please enter a valid phone number!");
 			isError = true;
 		}
-		if(html.id === 'shipping-info'){
-    }
 	}
-
+	if(html.id === 'billing-info'){
+		isError = false;
+		var checkedElement = document.billingform.inputCard.value;
+		checkedElement = checkedElement.replace(/\-/g, '');
+		checkedElement = checkedElement.replace(/\(/g, '');
+		checkedElement = checkedElement.replace(/\)/g, '');
+		checkedElement = checkedElement.replace(/ /g, '');
+		checkedElement = checkedElement.replace(/\+/g, '');
+		if (checkedElement.length !=16){
+		  alert("Please enter a valid card number!");
+			isError = true;
+		}
+		var checkedElement = document.billingform.inputCVC.value;
+		if(checkedElement.length != 3){
+			alert("Please enter a valid 3-digit CVC!");
+		}
+		var checkedElement = document.billingform.inputZip.value;
+		if (checkedElement.length !=5 & document.billingform.inputZip.disabled === false){
+			alert("Please enter a valid zipcode!");
+			isError = true;
+		}
+		var checkedElement = document.billingform.inputStreet.value;
+		if(checkedElement.includes("PO ") === true & document.billingform.inputStreet.disabled === false){
+			alert("We are unable to mail to PO Boxes.");
+			isError = true;
+		}
+  }
 	if(!isError & html.id === 'shipping-info')
 		window.location = "billing/index.html";
 	if(!isError & html.id === 'billing-info')
