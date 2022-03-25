@@ -2,6 +2,7 @@
 
 var html = document.querySelector('html');
 html.classList.add('js');
+var isError = false;
 
 if (html.id === 'shipping-info') {
 	var pageForm = document.querySelector('form[name="shippingform"]');
@@ -20,15 +21,46 @@ if (html.id === 'confirmation-page') {
 	restartBut.addEventListener('click', newOrder);
 }
 function submitForm(event){
+	isError = false;
 	var target = event.target;
 	event.preventDefault();
-	var isError = false;
 	for (var i = 0, element; element = elementList[i++];){
-		if (element.value === "")
+		if (element.value === "" & element.disabled === false)
 			isError = true;
 	}
 	if(isError)
 		alert("Some fields are blank. Please fill out entire form.");
+  else{
+		inputValidation();
+	}
+}
+function inputValidation(){
+	isError = false;
+	if(html.id === 'shipping-info'){
+		var checkedElement = document.shippingform.userEmail.value;
+		if(checkedElement.includes("@") === false){
+		  alert("Please enter a valid email address");
+			isError = true;
+		}
+		checkedElement = document.shippingform.inputZip.value;
+		if (checkedElement.length !=5){
+			alert("Please enter a valid zipcode!");
+      isError = true;
+		}
+		checkedElement = document.shippingform.phoneInput.value;
+		checkedElement = checkedElement.replace(/\-/g, '');
+		checkedElement = checkedElement.replace(/\(/g, '');
+		checkedElement = checkedElement.replace(/\)/g, '');
+		checkedElement = checkedElement.replace(/ /g, '');
+		checkedElement = checkedElement.replace(/\+/g, '');
+		if (checkedElement.length !=10 & checkedElement.length != 11){
+			alert("Please enter a valid phone number!");
+			isError = true;
+		}
+		if(html.id === 'shipping-info'){
+    }
+	}
+
 	if(!isError & html.id === 'shipping-info')
 		window.location = "billing/index.html";
 	if(!isError & html.id === 'billing-info')
@@ -42,6 +74,8 @@ function disableInputs(event){
 		for (var i = 4, element; element = elementList[i++];){
 			document.billingform.elements[i].disabled=true;
 		}
+		  document.billingform.elements[10].disabled=false;
+
 	}
 	else{
 		for (var i = 4, element; element = elementList[i++];){
